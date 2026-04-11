@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "created": "2026-04-11",
+    "description": "Spaced repetition queue for DSA and SQL problems",
+    "rating_scale": {
+      "0": "gave_up",
+      "1": "hard",
+      "2": "okay",
+      "3": "easy"
+    }
+  },
+  "problems": []
+}

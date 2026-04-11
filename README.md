@@ -1,61 +1,85 @@
 # Foundations
 
-A living knowledge base for CS fundamentals — updated as I study and build intuition over time.
+Active learning system for CS fundamentals. Claude acts as primary tutor — tracking progress, running spaced repetition, and adapting the curriculum based on performance.
 
-## Topics
+**Goal**: Competitive at big tech / AI companies within 9–12 months.
+**Start date**: April 14, 2026
 
-| Folder | What's Inside |
-|---|---|
-| `dsa/` | Data structures, algorithms, complexity analysis |
-| `sql/` | Query patterns, schema design, indexing, transactions |
-| `system-design/` | Distributed systems, scalability, architecture patterns |
-| `os-and-networking/` | OS concepts, TCP/IP, HTTP, concurrency |
+---
 
-## How This Repo Works
+## Schedule
 
-Each folder contains:
-- **`README.md`** — topic overview and key concepts
-- **Concept notes** — short `.md` files per topic (e.g., `hash-maps.md`, `b-trees.md`)
-- **Code examples** — minimal, annotated implementations
-- **Practice problems** — solved problems with explanation of approach
+| Day | Focus | Time |
+|-----|-------|------|
+| Tuesday | DSA + SQL | Post-2pm |
+| Wednesday | Systems (DDIA) | Post-2pm |
+| Thursday | DSA + SQL | Post-2pm |
+| Saturday | Optional build session | Morning |
+
+---
+
+## How This Works
+
+1. At the start of each session, Claude checks `review-queue/queue.json` for due problems (Anki-style)
+2. Due reviews surface first, then the next new problem in curriculum order
+3. You attempt the problem on LeetCode/Neetcode, then explain your approach and paste your code here
+4. Claude asks probing questions and critiques your reasoning
+5. Claude rates you (0–3) and updates the queue with the next review date
+6. Session is logged in `session-logs/`
+
+**Core rule: You always attempt first. Claude never gives the solution unprompted.**
+
+---
+
+## Curriculum
+
+- **DSA**: [Neetcode 150](curriculum/dsa.md) — in order, no skipping
+- **SQL**: [LeetCode SQL 50 → DataLemur](curriculum/sql.md) — in order, Postgres + SQL Server both
+- **Systems**: DDIA by Martin Kleppmann — half chapter per week, Wednesdays
+
+---
 
 ## Progress
 
-<!-- Updated by Claude as topics are covered -->
+See [progress.md](progress.md) for current status across all topics.
 
-### DSA
-- [ ] Arrays & Strings
-- [ ] Hash Maps
-- [ ] Two Pointers / Sliding Window
-- [ ] Stacks & Queues
-- [ ] Trees & Graphs
-- [ ] Heaps / Priority Queues
-- [ ] Binary Search
-- [ ] Dynamic Programming
-- [ ] Sorting Algorithms
+---
 
-### SQL
-- [ ] Basic queries (SELECT, WHERE, JOIN)
-- [ ] Aggregations & GROUP BY
-- [ ] Window functions
-- [ ] Schema design & normalization
-- [ ] Indexing & query optimization
-- [ ] Transactions & ACID
+## Spaced Repetition Tool
 
-### System Design
-- [ ] Horizontal vs vertical scaling
-- [ ] Load balancing
-- [ ] Caching strategies
-- [ ] Database sharding & replication
-- [ ] CAP theorem
-- [ ] Message queues
-- [ ] API design (REST, GraphQL)
-- [ ] Microservices vs monolith
+```bash
+# Check what's due today
+python3 review-queue/srs.py due
 
-### OS & Networking
-- [ ] Processes vs threads
-- [ ] Memory management
-- [ ] TCP/IP stack
-- [ ] HTTP/HTTPS
-- [ ] DNS
-- [ ] Concurrency primitives
+# Log a review (Claude does this after each problem)
+python3 review-queue/srs.py review two-sum 2 --notes "got hashmap but missed edge case"
+
+# Add a problem to the queue
+python3 review-queue/srs.py add two-sum "Two Sum" dsa arrays easy --url "https://leetcode.com/problems/two-sum/"
+
+# Overall stats
+python3 review-queue/srs.py stats
+```
+
+Rating scale: `0` gave up · `1` hard · `2` okay · `3` easy
+
+---
+
+## Repo Structure
+
+```
+foundations/
+├── CLAUDE.md                  # Tutor instructions for Claude
+├── curriculum/
+│   ├── dsa.md                 # Neetcode 150 ordered list
+│   └── sql.md                 # SQL 50 + DataLemur ordered list
+├── review-queue/
+│   ├── queue.json             # SRS state (ground truth)
+│   └── srs.py                 # SM-2 spaced repetition calculator
+├── session-logs/              # One file per session
+├── notes/
+│   ├── dsa/                   # Concept notes per topic
+│   ├── sql/                   # SQL concept notes
+│   └── systems/               # DDIA notes
+└── progress.md                # Dashboard
+```
