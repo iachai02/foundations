@@ -9,5 +9,52 @@
       "3": "easy"
     }
   },
-  "problems": []
+  "problems": [
+    {
+      "id": "contains-duplicate",
+      "name": "Contains Duplicate",
+      "type": "dsa",
+      "topic": "arrays",
+      "difficulty": "easy",
+      "url": "https://leetcode.com/problems/contains-duplicate/",
+      "added": "2026-04-16",
+      "reviews": [
+        {
+          "date": "2026-04-16",
+          "rating": 2,
+          "rating_label": "okay",
+          "interval_days": 7,
+          "next_review": "2026-04-23",
+          "notes": "Got hashset approach. Confused 'quantity' vs 'membership'. Slipped on sort complexity (said O(logn), corrected to O(nlogn)). Solid on best/worst case after nudging."
+        }
+      ],
+      "current_interval": 7,
+      "ease_factor": 2.5,
+      "next_review": "2026-04-23",
+      "last_reviewed": "2026-04-16"
+    },
+    {
+      "id": "recyclable-low-fat",
+      "name": "Recyclable and Low Fat Products",
+      "type": "sql",
+      "topic": "select",
+      "difficulty": "easy",
+      "url": "https://leetcode.com/problems/recyclable-and-low-fat-products/",
+      "added": "2026-04-16",
+      "reviews": [
+        {
+          "date": "2026-04-16",
+          "rating": 3,
+          "rating_label": "easy",
+          "interval_days": 14,
+          "next_review": "2026-04-30",
+          "notes": "Correct approach immediately. Fixed IN->= quickly. Solid on AND/OR logic. Knew SQL Server syntax is identical here."
+        }
+      ],
+      "current_interval": 14,
+      "ease_factor": 2.5,
+      "next_review": "2026-04-30",
+      "last_reviewed": "2026-04-16"
+    }
+  ]
 }
