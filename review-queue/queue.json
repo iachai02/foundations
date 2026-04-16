@@ -55,6 +55,52 @@
       "ease_factor": 2.5,
       "next_review": "2026-04-30",
       "last_reviewed": "2026-04-16"
+    },
+    {
+      "id": "valid-anagram",
+      "name": "Valid Anagram",
+      "type": "dsa",
+      "topic": "arrays",
+      "difficulty": "easy",
+      "url": "https://leetcode.com/problems/valid-anagram/",
+      "added": "2026-04-16",
+      "reviews": [
+        {
+          "date": "2026-04-16",
+          "rating": 3,
+          "rating_label": "easy",
+          "interval_days": 14,
+          "next_review": "2026-04-30",
+          "notes": "Clean two-dict solution. Good explanation. Caught O(1) space nuance (bounded by 26) quickly. Worked through single-dict decrement approach with light nudging."
+        }
+      ],
+      "current_interval": 14,
+      "ease_factor": 2.5,
+      "next_review": "2026-04-30",
+      "last_reviewed": "2026-04-16"
+    },
+    {
+      "id": "find-customer-referee",
+      "name": "Find Customer Referee",
+      "type": "sql",
+      "topic": "select",
+      "difficulty": "easy",
+      "url": "https://leetcode.com/problems/find-customer-referee/",
+      "added": "2026-04-16",
+      "reviews": [
+        {
+          "date": "2026-04-16",
+          "rating": 1,
+          "rating_label": "hard",
+          "interval_days": 3,
+          "next_review": "2026-04-19",
+          "notes": "Confused id vs referee_id columns. Didn't know NULL \\!= 2 evaluates to NULL not TRUE. Needed heavy scaffolding on NULL handling. Core NULL trap concept needs to solidify."
+        }
+      ],
+      "current_interval": 3,
+      "ease_factor": 2.35,
+      "next_review": "2026-04-19",
+      "last_reviewed": "2026-04-16"
     }
   ]
 }
