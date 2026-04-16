@@ -52,7 +52,7 @@ Updated by Claude after each session.
 
 ---
 
-## Systems — DDIA
+## Systems — Phase 1: DDIA
 
 **Book**: Designing Data-Intensive Applications (Martin Kleppmann)
 **Started**: April 15, 2026 (first Wednesday)
@@ -72,6 +72,27 @@ Updated by Claude after each session.
 | 10 | Batch Processing | 🔒 locked | — |
 | 11 | Stream Processing | 🔒 locked | — |
 | 12 | The Future of Data Systems | 🔒 locked | — |
+
+---
+
+## Systems — Phase 2: ML Systems Design
+
+**Book**: Designing Machine Learning Systems (Chip Huyen)
+**Status**: 🔒 locked — begins after DDIA is complete (~Month 6-7)
+**Why**: Covers feature stores, training pipelines, inference systems, model monitoring — critical for AI company interviews (Anthropic, OpenAI, etc.)
+
+| Chapter | Title | Status |
+|---------|-------|--------|
+| 1 | Overview of ML Systems | 🔒 locked |
+| 2 | Introduction to ML Systems Design | 🔒 locked |
+| 3 | Data Engineering Fundamentals | 🔒 locked |
+| 4 | Training Data | 🔒 locked |
+| 5 | Feature Engineering | 🔒 locked |
+| 6 | Model Development and Offline Evaluation | 🔒 locked |
+| 7 | Model Deployment and Prediction Service | 🔒 locked |
+| 8 | Data Distribution Shifts and Monitoring | 🔒 locked |
+| 9 | Continual Learning and Test in Production | 🔒 locked |
+| 10 | Infrastructure and Tooling for MLOps | 🔒 locked |
 
 ---
 
